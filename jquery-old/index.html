@@ -11,20 +11,20 @@
     <script>
     	// Using the core $.ajax() method
 		$.ajax({
-			aync: false,
-		 
+			async: false,
+
 		    // The URL for the request
 		    url: "https://api.havenondemand.com/1/api/sync/analyzesentiment/v1",
-		 
+
 		    // The data to send (will be converted to a query string)
 		    data: {
 		        text: "I am very happy. I am devastated.",
 		        apikey: "1b0b6ac1-b746-4763-ac57-2f5ba614cabb"
 		    },
-		 
+
 		    // Whether this is a POST or GET request
 		    type: "POST",
-		 
+
 		    // The type of data we expect back
 		    dataType : "json",
 		})
