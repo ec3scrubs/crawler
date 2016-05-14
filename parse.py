@@ -6,7 +6,12 @@ def main():
     content = soup.findAll(class_ = 'entry-content')
     title = soup.findAll(class_ = 'entry-title')
     timestamps = soup.findAll(True, {'class' : {'entry-date', 'published'}})
-    print len(timestamps), len(title), len(content)
+
+    posts = []
+    for i in xrange(len(content)) :
+        c, t, tm = content[i].get_text(), title[i].get_text(), timestamps[i].get_text()
+        posts.append([c, t, tm])
+    print posts
 
 if __name__ == "__main__":
     main()
